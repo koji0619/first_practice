@@ -1,0 +1,115 @@
+/******************************************************************
+
+Stylesheet: 600px以上のタブレットやモニタで適用
+
+******************************************************************/
+
+.menu {
+    &__top {
+        height: 60px;
+    }
+    .logo {
+        font-size: 2.5rem;
+    }
+    &__list {
+        height: 60px;
+        background: none;
+        position: absolute;
+        transform: none;
+        z-index: 25;
+    }
+    &__ul {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0;
+        width: 50%;
+        margin-left: auto;
+        height: 60px;
+    }
+    &__item {
+        border: none;
+        &:first-of-type {
+            border-top: none;
+        }
+        &>a {
+            padding: 5px 10px;
+            &::before {
+                border: none;
+            }
+        }
+    }
+    &__sns {
+        display: none;
+    }
+}
+
+.swiper-slide {
+    .hero {
+        &-title {
+            top: 40%;
+        }
+    }
+}
+
+.menu__slide {
+    display: none;
+}
+
+.swiper-pagination {
+    display: block;
+}
+
+.swiper-button-prev {
+    display: block;
+}
+
+.swiper-button-next {
+    display: block;
+}
+
+.scroll {
+    left: 5%;
+    height: 100px;
+    &__text {
+        transform: rotate(90deg);
+        padding-right: 30px;
+        font-size: 20px;
+    }
+    &__border {
+        height: 100px;
+        transform: scaleY(0.4);
+        animation: kf-arrow 3s linear 0.0s infinite alternate none running;
+    }
+}
+
+.main {
+    &__text {
+        padding: 20px;
+        font-size: $font-sm;
+    }
+}
+
+.project {
+    &__text {
+        &__span {
+            font-size: $font-sm;
+        }
+        &__h3 {
+            font-size: $font-md;
+        }
+        &__ul {
+            font-size: $font-sm;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.footer {
+    &__text {
+        font-size: 2.5rem;
+    }
+    &__sns {
+        font-size: 2.5rem;
+    }
+}

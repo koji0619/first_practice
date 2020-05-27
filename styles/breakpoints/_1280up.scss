@@ -1,0 +1,60 @@
+/******************************************************************
+
+Stylesheet: 1281px以上のモニタで適用
+
+******************************************************************/
+
+.menu {
+    &__ul {
+        width: 40%;
+    }
+    &__item {
+        &>a {
+            padding: 10px 15px;
+        }
+    }
+}
+
+.swiper-slide {
+    .hero {
+        &-title {
+            font-size: $font-lg;
+        }
+        &-sub {
+            font-size: $font-md;
+        }
+    }
+}
+
+.scroll {
+    &__text {
+        padding-right: 30px;
+        font-size: 25px;
+        font-weight: 100;
+    }
+}
+
+.main {
+    &__text {
+        &__title {
+            font-size: $font-md;
+        }
+        &__sub {
+            font-size: $font-sm;
+        }
+    }
+}
+
+.project {
+    &__text {
+        &__span {
+            font-size: $font-lg;
+        }
+        &__h3 {
+            font-size: $font-bg;
+        }
+        &__ul {
+            font-size: $font-lg;
+        }
+    }
+}

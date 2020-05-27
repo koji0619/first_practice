@@ -1,0 +1,123 @@
+.menu {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  &__top {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 20;
+    &__width {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      height: inherit;
+      margin: 0 auto;
+    }
+  }
+  .logo {
+    font-size: 25px;
+    width: 2em;
+    font-size: $font-sm;
+    display: flex;
+    align-items: center;
+    &__img {
+      width: 100%;
+    }
+    &__title {
+      margin: 0;
+      font-size: 1em;
+      color: $cWhite;
+    }
+  }
+  &__list {
+    width: 100%;
+    height: 100vh;
+    background-color: #f3ca3e;
+    position: absolute;
+    z-index: 15;
+    transform: translateX(100%);
+    transition: 0.7s;
+    &-click {
+      transform: none;
+    }
+  }
+  &__ul {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+    list-style: none;
+  }
+  &__item {
+    border-bottom: 1px solid white;
+    & > a {
+      display: block;
+      color: $cWhite;
+      text-decoration: none;
+      padding: 15px 0 15px 20px;
+      font-size: $font-sm;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        width: 10px;
+        height: 10px;
+        border-top: 2px solid $cWhite;
+        border-right: 2px solid $cWhite;
+        transform: translate(-5%, -50%) rotate(45deg);
+      }
+    }
+    &:first-of-type {
+      border-top: 1px solid white;
+    }
+  }
+  &__slide {
+    &__torigger {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: $cWhite;
+      transition: 0.7s;
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+    &-click {
+      .menu__slide__torigger {
+        &:nth-child(1) {
+          transform: translateY(7px) rotate(45deg);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          transform: translateY(-7px) rotate(-45deg);
+        }
+      }
+    }
+  }
+  &__sns {
+    display: block;
+    width: 90%;
+    margin: 0 auto 20px;
+    height: 50px;
+    border: 1px solid $cWhite;
+    border-radius: 15px;
+    position: relative;
+    & > i {
+      font-size: 2rem;
+      color: #fff;
+      letter-spacing: 5px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
